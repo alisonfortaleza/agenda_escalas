@@ -1,0 +1,12 @@
+{
+  "name": "prisma-agenda-local",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Local-only demonstration; production is gated.",
+  "scripts": {
+    "dev": "python3 -m app.server",
+    "build": "tsc web/app.ts --target es2022 --lib es2022,dom --module es2022 --strict --outDir web",
+    "test": "python3 -m unittest discover -s tests -v"
+  },
+  "devDependencies": {"typescript": "7.0.2"}
+}

@@ -1,0 +1,15 @@
+data/
+__pycache__/
+*.pyc
+node_modules/
+.env
+coverage*
+supabase/.temp/
+supabase/.branches/
+*.dump
+*.backup
+*.log
+.netlify/
+.env.*
+!.env.example
+.dev.vars*
