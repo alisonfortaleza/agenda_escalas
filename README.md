@@ -2,6 +2,8 @@
 
 Aplicação local com frontend TypeScript, API Python e SQLite persistente. Implementação baseada na revisão 7 do anexo, com as limitações descritas em `docs/STATUS.md`. **Demonstração com dados fictícios e Pix manual, sem movimentar dinheiro real.**
 
+Teste online: https://agenda-e-escalas.netlify.app. Usuário `gerente`, senha de demonstração `Demo@2026!`.
+
 ## Versão de hospedagem e visual
 
 O responsável autorizou a publicação da demonstração no Netlify. API JavaScript no Supabase, gateway Netlify e identidade Panobianco Cassimiro com logomarcas originais. Veja `docs/HOSPEDAGEM.md` e `docs/DESIGN.md`.

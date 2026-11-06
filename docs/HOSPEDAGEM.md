@@ -24,7 +24,7 @@ A API usa sessões opacas da própria aplicação, autorização por perfil/unid
 
 ## Acesso
 
-URL prevista do projeto existente: https://agenda-e-escalas.netlify.app. Confirmar status ready e chamadas HTTP antes de entregar o link como publicado.
+URL publicada: https://agenda-e-escalas.netlify.app. Deploy 6aedfcaa80b3048cb00548bf em estado ready. Chamadas HTTP de página, logomarcas, saúde, bootstrap, login, estado, permissões, CSRF e logout aprovadas para os cinco perfis de demonstração.
 
 Perfis fictícios gerente, recepcao, professor, professor2 e estagiario: senha de demonstração Demo@2026!. O admin define a própria senha usando o código de implantação de uso único entregue ao responsável, que não integra o código-fonte.
 

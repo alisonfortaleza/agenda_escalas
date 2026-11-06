@@ -1,18 +1,14 @@
-# Estado da entrega local
+# Estado da demonstração — Panobianco Cassimiro
 
-A especificação anexada contém o escopo de produto e os critérios de aceite. A solicitação desta etapa autoriza desenvolvimento e teste locais, dados fictícios e Pix manual, **sem produção**. Instruções de publicação presentes no anexo não foram tomadas como autorização para publicar.
+O pedido original autorizava somente teste local. Em 06/11/2026, o responsável autorizou explicitamente a publicação no Netlify para começar os testes. Essa autorização posterior permite hospedar a demonstração com dados fictícios e Pix manual, sem operações financeiras reais.
 
-## Adaptação de hospedagem e visual — 06/11/2026
+## Publicação verificada — 06/11/2026
 
-Backend JavaScript, gateway Netlify e configuração de admin por código de uso único implementados e testados localmente. Site público preservado; admin sem senha desativado na versão hospedada. Layout fitness aplicado ao login e painel. Publicação da API recusada pela revisão automática e pendente de autorização explícita. Detalhes em `HOSPEDAGEM.md` e `DESIGN.md`.
+Disponível em https://agenda-e-escalas.netlify.app. Deploy Netlify 6aedfcaa80b3048cb00548bf, commit a4165d75a7311c5797a093b5d319ed6382b81d10, estado ready. Frontend TypeScript, Netlify Function /api/* e API JavaScript agenda-api no Supabase; banco PostgreSQL persistente com schema privado e RLS. Logomarcas originais e identidade laranja/branco/preto incorporadas.
 
-## Atualização de infraestrutura — 06/11/2026
+Verificação HTTP no endereço público: página inicial e duas logomarcas 200; login, estado, cookies seguros, CSRF e logout dos cinco perfis de demonstração aprovados; recepção sem escalas; professores sem financeiro/auditoria; bootstrap sem senha desativado. Código de admin tem uso único e validade de 24 horas, entregue somente ao responsável. A verificação HTTP não substitui homologação visual no navegador nem o aceite integral da especificação.
 
-Banco privado aplicado e inicializado no novo Supabase da agenda; repositório GitHub preparado e Netlify configurado sem builds/publicação automáticos. Consulte `INFRAESTRUTURA.md` para o vínculo GitHub/Netlify e a adaptação do backend que ainda faltam. Os limites funcionais listados abaixo continuam vigentes.
-
-## Adaptação posterior para Supabase / GitHub
-
-Adaptador PostgreSQL e migração privados preparados, com isolamento no banco, conflitos de intervalo e CI localizável em `.github/workflows/test.yml`. Validação em Postgres descartável local; nenhum banco/repositório remoto modificado. Destino e hospedagem continuam pendentes. Detalhes em `SUPABASE.md`.
+Os recursos locais Python/SQLite continuam disponíveis. A lista abaixo reúne o MVP; as limitações funcionais continuam vigentes na versão hospedada.
 
 ## Implementado e testável
 
@@ -41,8 +37,8 @@ Esta entrega **não conclui todos os 67 critérios comerciais**. Os testes autom
 
 | Área | Limite desta versão |
 |---|---|
-| Sites / acesso remoto | Sem Site remoto ou preview acessível ao usuário. Helpers/Vinext e navegador do skill indisponíveis; backend local Python requer adaptação para runtime e banco hospedados do Sites. Sem implantação remota protegida ou produção. |
-| Segurança de produção | Recuperação segura de senha, MFA/reforço de admin, TLS, gestão de segredos hospedados, monitoramento externo e revisão independente pendentes. Servidor bloqueia ambiente diferente de local. |
+| Sites / acesso remoto | Demonstração publicada no Netlify, com API Supabase e PostgreSQL persistente. Hospedagem .chatgpt.site não foi realizada. |
+| Segurança operacional | HTTPS, sessões, CSRF, permissões e isolamento ativos na demonstração pública. Recuperação por e-mail, MFA, monitoramento externo e revisão independente pendentes. Admin sem senha desativado. |
 | Produto multiacademia | Isolamento e organizações demonstrativas prontos; cadastro comercial de organizações, personalização completa de marca, administração da plataforma e suporte com autorização/auditoria próprios pendentes. Não existe conta global de plataforma disfarçada de admin. |
 | Administração da equipe | Criar pessoas, contas e jornadas está pronto; editar/inativar profissionais, transferir unidade, trocar tutor com impacto e reconciliar correção de CPF não estão expostos. A ausência de endpoint de edição evita alterações órfãs. Férias, afastamentos, elegibilidade detalhada e vigências de vínculo ainda precisam de cadastros próprios. |
 | Oferta avançada | Janelas compartilhadas/exclusivas e limite disponíveis; prévia completa de calendário com avaliadores por janela, exceções de oferta por data e distribuição editável de todos os inícios ainda pendentes. Distribuição inicial usa primeiros inícios sequenciais das janelas. Oferta semanal bruta não desconta feriados nem indisponibilidade dos profissionais. |
