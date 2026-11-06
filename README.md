@@ -1,14 +1,14 @@
 # Agenda & Escalas • versão de teste
 
-Aplicação local com frontend TypeScript, API Python e SQLite persistente. Implementação baseada na revisão 7 do anexo, com as limitações descritas em `docs/STATUS.md`. **Nenhum site foi publicado e nenhuma transação financeira foi executada.**
+Aplicação local com frontend TypeScript, API Python e SQLite persistente. Implementação baseada na revisão 7 do anexo, com as limitações descritas em `docs/STATUS.md`. **Demonstração com dados fictícios e Pix manual, sem movimentar dinheiro real.**
 
 ## Versão de hospedagem e visual
 
-O backend JavaScript e o visual inspirado na referência Fitmas estão preparados para revisão. A API ainda não foi publicada: a revisão automática bloqueou essa ação por conflito com a restrição anterior de produção. Veja `docs/HOSPEDAGEM.md` e `docs/DESIGN.md`. A produção Netlify continua bloqueada.
+O responsável autorizou a publicação da demonstração no Netlify. API JavaScript no Supabase, gateway Netlify e identidade Panobianco Cassimiro com logomarcas originais. Veja `docs/HOSPEDAGEM.md` e `docs/DESIGN.md`.
 
 ## Infraestrutura atual
 
-O banco Supabase da agenda foi criado e inicializado com dados fictícios. O repositório GitHub está preparado com bloqueio de builds/publicação no Netlify. O vínculo do repositório pela interface Netlify e a adaptação do backend hospedado ainda precisam ser concluídos. Consulte `docs/INFRAESTRUTURA.md`.
+O banco Supabase da agenda foi criado e inicializado com dados fictícios. O repositório GitHub está conectado ao Netlify. O backend hospedado foi adaptado para Supabase Edge Functions, com dados privados, sessões e permissões próprias. Consulte `docs/INFRAESTRUTURA.md`.
 
 ## Adaptação Supabase e GitHub
 

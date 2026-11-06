@@ -1,2 +1,2 @@
-// Netlify: zero cancels a Git build; one proceeds.
-process.exit(process.env.CONTEXT==='production'?0:1);
+// Netlify: one proceeds with a Git build. Hosted demo publication authorized by the owner.
+process.exit(1);

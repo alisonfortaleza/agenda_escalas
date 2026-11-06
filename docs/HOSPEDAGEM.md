@@ -1,16 +1,14 @@
-# Backend hospedado e layout fitness — versão para revisão
+# Backend hospedado e layout Panobianco Cassimiro
 
 A aplicação ganhou um backend JavaScript que usa o PostgreSQL/Supabase já configurado. O frontend é compilado para `dist/`, e uma Netlify Function encaminha as chamadas `/api/*` à API. Não há credencial de banco no navegador nem no repositório.
 
-## Estado real
+## Implantação de demonstração autorizada
 
-- Código do backend JavaScript e da Netlify Function implementado.
-- 56 contratos da aplicação local aprovados contra o novo serviço JavaScript; quatro casos exclusivamente locais/backup SQLite não se aplicam a esta rodada.
-- 13 testes de API/gateway aprovados: configuração de admin, autenticação, sessões, CSRF, permissões, isolamento, referências Pix, concorrência, datas e encaminhamento seguro.
-- Frontend compilado com TypeScript estrito e assets locais.
-- Produção Netlify continua bloqueada. Nenhuma prévia ou aplicação foi publicada por esta alteração.
-- A publicação da Edge Function foi recusada pela revisão automática: ela criaria uma API pública ativa no Supabase, em conflito com o pedido anterior de não publicar produção. A recusa foi respeitada. A API ainda não está disponível online.
-- Migração `hosted_runtime` aplicada ao banco de teste, sem API pública: metadados de configuração, limites de login e tarefa SQL de expiração/faltas. Cron ativo a cada minuto, auditado e idempotente; política profissional continua desabilitada até configuração explícita.
+O responsável autorizou explicitamente a publicação no Netlify para testes. O bloqueio anterior de compilação em production foi removido somente após essa autorização. Este contexto de hospedagem serve a demonstração com dados fictícios, não operações financeiras reais.
+
+API Supabase agenda-api publicada com autenticação própria. O frontend e a Netlify Function usam SUPABASE_URL no contexto production, sem credencial privilegiada no navegador. Cron de expiração/faltas permanece ativo no banco de teste.
+
+Validação anterior: 66 testes Python, 56 contratos JavaScript (4 locais ignorados), 13 testes API/gateway. Compilação e testes do gateway são repetidos para a implantação. Conferência visual em navegador ainda depende de ferramenta disponível.
 
 ## Site público e acesso administrativo
 
@@ -24,12 +22,10 @@ Código de implantação, senha e cookies não fazem parte deste arquivo, dos as
 
 A API usa sessões opacas da própria aplicação, autorização por perfil/unidade, CSRF em alterações, cookies HttpOnly/Secure/SameSite e limite persistente de tentativas de login. A Edge Function está preparada para autenticação própria, sem depender do JWT do Supabase; isso exige `verify_jwt: false` na publicação. Rotas de dados exigem sessão; saúde, login e configuração inicial têm validações específicas. A configuração inicial exige o código válido, não o nome admin.
 
-## Próximos passos após autorização explícita
+## Acesso
 
-1. Publicar o backend de demonstração no Supabase e testar chamadas HTTP reais.
-2. Validar o funcionamento no runtime e os arquivos de log sem expor credenciais.
-3. Habilitar uma prévia no Netlify, conservando o bloqueio da produção.
-4. Entregar URL de teste e código de configuração ao responsável.
-5. Concluir inspeção visual em navegador. O ambiente atual não oferece essa ferramenta.
+URL prevista do projeto existente: https://agenda-e-escalas.netlify.app. Confirmar status ready e chamadas HTTP antes de entregar o link como publicado.
 
-A antiga versão Python e seus testes continuam disponíveis para execução local. Os limites funcionais do MVP (tutoria de reserva, relatórios avançados e demais itens de STATUS.md) continuam explícitos; esta adaptação não os transforma em funcionalidades concluídas.
+Perfis fictícios gerente, recepcao, professor, professor2 e estagiario: senha de demonstração Demo@2026!. O admin define a própria senha usando o código de implantação de uso único entregue ao responsável, que não integra o código-fonte.
+
+As limitações funcionais do MVP permanecem descritas em STATUS.md. Hospedagem não transforma os itens pendentes em funcionalidades prontas.

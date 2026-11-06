@@ -1,9 +1,8 @@
 [build]
+  environment = { NODE_VERSION = "24" }
   command = "npm run build:netlify"
   publish = "dist"
   ignore = "node scripts/ignore-netlify.mjs"
-[context.production]
-  command = "node scripts/netlify-not-ready.mjs"
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
