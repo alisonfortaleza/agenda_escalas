@@ -1,0 +1,21 @@
+✔ public hosted mode never grants passwordless admin (956.414307ms)
+✔ anonymous requests only reach public setup/login/health, never data (724.866264ms)
+✔ setup code is required, single use, and admin sessions use cookies (827.059283ms)
+✔ session is protected by csrf and logout invalidation (705.366777ms)
+✔ teacher auth works under RLS and financial records remain private (761.989305ms)
+✔ reception cannot fetch scales or export directly (825.387804ms)
+✔ failed login attempts persist and become rate limited (1045.689565ms)
+✔ paid external cancellation uses snapshot and remains refund pending (928.548504ms)
+✔ concurrent API reserve has exactly one winner (754.642941ms)
+✔ invalid civil dates and unauthorized configuration do not create records (717.56318ms)
+✔ gateway rejects a cross-origin write before forwarding (32.177377ms)
+✔ gateway returns unavailable when runtime is not configured (1.203602ms)
+✔ gateway forwards app session and csrf and only returns public data envelope (3.500002ms)
+ℹ tests 13
+ℹ suites 0
+ℹ pass 13
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 8534.630003

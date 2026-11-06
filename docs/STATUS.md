@@ -2,6 +2,10 @@
 
 A especificação anexada contém o escopo de produto e os critérios de aceite. A solicitação desta etapa autoriza desenvolvimento e teste locais, dados fictícios e Pix manual, **sem produção**. Instruções de publicação presentes no anexo não foram tomadas como autorização para publicar.
 
+## Adaptação de hospedagem e visual — 06/11/2026
+
+Backend JavaScript, gateway Netlify e configuração de admin por código de uso único implementados e testados localmente. Site público preservado; admin sem senha desativado na versão hospedada. Layout fitness aplicado ao login e painel. Publicação da API recusada pela revisão automática e pendente de autorização explícita. Detalhes em `HOSPEDAGEM.md` e `DESIGN.md`.
+
 ## Atualização de infraestrutura — 06/11/2026
 
 Banco privado aplicado e inicializado no novo Supabase da agenda; repositório GitHub preparado e Netlify configurado sem builds/publicação automáticos. Consulte `INFRAESTRUTURA.md` para o vínculo GitHub/Netlify e a adaptação do backend que ainda faltam. Os limites funcionais listados abaixo continuam vigentes.

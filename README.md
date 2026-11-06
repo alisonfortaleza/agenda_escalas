@@ -1,6 +1,10 @@
-# Prisma — Agenda & Escalas • teste local
+# Agenda & Escalas • versão de teste
 
 Aplicação local com frontend TypeScript, API Python e SQLite persistente. Implementação baseada na revisão 7 do anexo, com as limitações descritas em `docs/STATUS.md`. **Nenhum site foi publicado e nenhuma transação financeira foi executada.**
+
+## Versão de hospedagem e visual
+
+O backend JavaScript e o visual inspirado na referência Fitmas estão preparados para revisão. A API ainda não foi publicada: a revisão automática bloqueou essa ação por conflito com a restrição anterior de produção. Veja `docs/HOSPEDAGEM.md` e `docs/DESIGN.md`. A produção Netlify continua bloqueada.
 
 ## Infraestrutura atual
 

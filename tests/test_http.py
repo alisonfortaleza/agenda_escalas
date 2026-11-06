@@ -28,6 +28,6 @@ class HttpTests(unittest.TestCase):
         for url in ['/api/schedules','/api/export','/api/state?unit=2']:
             self.assertEqual(self.request(url,headers=h)[0],403)
     def test_frontend_security_headers_and_static(self):
-        status,h,b=self.request('/');self.assertEqual(status,200);self.assertIn(b'Prisma',b);self.assertIn("frame-ancestors 'none'",h['Content-Security-Policy']);self.assertEqual(h['Cache-Control'],'no-store')
+        status,h,b=self.request('/');self.assertEqual(status,200);self.assertIn('text/html',h['Content-Type']);self.assertIn("frame-ancestors 'none'",h['Content-Security-Policy']);self.assertEqual(h['Cache-Control'],'no-store')
     def test_logout_invalidates_session(self):
         h=self.login();self.assertEqual(self.request('/api/logout',{},h)[0],200);self.assertEqual(self.request('/api/state',headers=h)[0],401)
