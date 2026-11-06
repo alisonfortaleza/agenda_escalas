@@ -12,21 +12,21 @@ body{background:#f3f3f3}h1,h2,h3,.brand,.stat-value,.summary-value{font-family:'
 
 .brand-mark svg{width:24px;height:24px;transform:skew(10deg)}
 
-/* Panobianco Cassimiro: orange / white / black. Original logo files pending. */
+/* Panobianco Cassimiro: orange / white / black. Original logos supplied by the unit. */
 :root{--brand-orange:#ff5a1f;--brand-white:#fff;--brand-black:#171717}
 .primary,.dark,.nav button.active,.avatar,.stat.featured,.tabbar button.selected{color:#171717}
 .primary:hover,.dark:hover{background:#ff763f;border-color:#ff763f;color:#171717}
 .stat.featured .stat-value,.stat.featured .stat-label,.stat.featured .stat-note,.stat.featured small,.nav button.active .nav-icon{color:#171717}
 .academy-brand{display:flex;flex-direction:column;align-items:flex-start;gap:9px;max-width:100%;flex-shrink:0}
 .academy-logo{display:block;object-fit:contain;max-width:100%;height:auto}
-.academy-brand--circular .academy-logo{width:144px;aspect-ratio:1}
+.academy-brand--circular .academy-logo{width:192px;aspect-ratio:1}
 .academy-brand--horizontal{padding:14px 12px;background:#fff;color:#171717;border-bottom:3px solid var(--brand-orange);width:100%;max-width:244px}
 .academy-brand--horizontal .academy-logo{width:220px;aspect-ratio:1765/432}
 .academy-unit{font-family:'Kumbh Sans',Arial,sans-serif;font-size:10px;letter-spacing:3px;font-weight:600;color:inherit}
-.academy-wordmark strong{display:block;font-family:'Kanit',Impact,sans-serif;font-weight:800;font-size:25px;line-height:1;letter-spacing:-.5px}
-.academy-wordmark span{display:block;font-size:10px;letter-spacing:4px;margin-top:5px}
-.academy-brand--circular{color:white;border-left:4px solid var(--brand-orange);padding:8px 0 8px 15px;margin-bottom:42px}
+
+
+.academy-brand--circular{color:white;margin-bottom:32px}
 .login-form>.academy-brand{margin-bottom:30px;padding-left:0;border-bottom:0}
 .login-art .eyebrow{color:#ff9a70}.sidebar .brand-sub{margin-top:17px;margin-bottom:30px}
 .login-form .eyebrow{color:#b83a08}.text-link{color:#b83a08}
-@media(max-width:760px){.sidebar>.academy-brand{max-width:230px;margin-bottom:14px}.academy-brand--circular .academy-logo{width:112px}.academy-brand--circular{margin-bottom:30px}.login-form>.academy-brand{display:none}.academy-wordmark strong{font-size:24px}}
+@media(max-width:760px){.sidebar>.academy-brand{max-width:230px;margin-bottom:14px}.academy-brand--circular .academy-logo{width:160px}.academy-brand--circular{margin-bottom:30px}.login-form>.academy-brand{display:none}}

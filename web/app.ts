@@ -7,11 +7,9 @@ const app=document.querySelector<HTMLDivElement>('#app')!;
 const modal=document.querySelector<HTMLDialogElement>('#modal')!;
 const labels:Record<string,string>={admin:'Administrador',manager:'Gerência',reception:'Recepção',teacher:'Professor',intern:'Estagiário',student:'Platinum',internal:'Particular interno',external:'Particular externo',confirmed:'Confirmada',awaiting_payment:'Conferência Pix',expired:'Expirada',cancelled:'Cancelada',no_show:'Faltou',pending:'Pendente',not_applicable:'Não se aplica',draft:'Rascunho',published:'Publicada',processed:'Devolvido',refund_pending:'Reembolso pendente',partially_refunded:'Reembolso parcial',fully_refunded:'Reembolso integral',requested:'Aguardando colega',accepted:'Aguardando admin',approved:'Aprovada'};
 const esc=(v:unknown)=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
-// Set these paths only after the original logo files have been provided.
-const academyLogos={circular:'',horizontal:''};
+const academyLogos={circular:'/assets/logos/panobianco-cassimiro-circular.png',horizontal:'/assets/logos/panobianco-horizontal.png'};
 function academyBrand(variant:'circular'|'horizontal'){
- const src=academyLogos[variant];
- return `<div class="academy-brand academy-brand--${variant}">${src?`<img src="${esc(src)}" alt="Panobianco Academia${variant==='circular'?' Cassimiro':''}" class="academy-logo" ${variant==='circular'?'width="144" height="144"':'width="220" height="54"'} decoding="async">`:'<div class="academy-wordmark"><strong>PANOBIANCO</strong><span>ACADEMIA</span></div>'}${variant==='horizontal'||!src?'<span class="academy-unit">CASSIMIRO</span>':''}</div>`;
+ return `<div class="academy-brand academy-brand--${variant}"><img src="${academyLogos[variant]}" alt="Panobianco Academia${variant==='circular'?' Cassimiro':''}" class="academy-logo" ${variant==='circular'?'width="1024" height="1024"':'width="1765" height="432"'} decoding="async">${variant==='horizontal'?'<span class="academy-unit">CASSIMIRO</span>':''}</div>`;
 }
 const money=(v:number)=>new Intl.NumberFormat('pt-BR',{style:'currency',currency:'BRL'}).format((v||0)/100);
 const badge=(v:string)=>`<span class="status ${esc(v)}">${esc(labels[v]||v)}</span>`;
