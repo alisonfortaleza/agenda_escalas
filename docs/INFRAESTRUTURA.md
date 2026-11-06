@@ -12,7 +12,7 @@ Estes identificadores e a URL são públicos; credenciais de acesso não pertenc
 
 ## Concluído
 
-Migração inicial aplicada ao Supabase separado da agenda. São 21 tabelas com RLS no schema privado `prisma_agenda`, sem USAGE para `anon` ou `authenticated`, e constraints de intervalo/relacionamento. A checagem de segurança do projeto não retornou alertas após a migração.
+Migração inicial `20261106145458_prisma_agenda_private.sql` aplicada ao Supabase separado da agenda. A versão local foi alinhada à versão registrada pela ferramenta no histórico remoto, mantendo o SQL idêntico. São 21 tabelas com RLS no schema privado `prisma_agenda`, sem USAGE para `anon` ou `authenticated`, e constraints de intervalo/relacionamento. A checagem de segurança do projeto não retornou alertas após a migração.
 
 Dados fictícios inicializados uma única vez: organizações/unidades/salas, equipe, alunos, profissionais externos, tutoria, jornadas e contas de demonstração da aplicação. Nenhum usuário foi criado em Supabase Auth e nenhum convite foi enviado. Não foram geradas cobranças, reservas ou pagamentos reais. As contas ainda não têm uma API hospedada para login; o admin sem senha continua limitado ao ambiente local protegido.
 
