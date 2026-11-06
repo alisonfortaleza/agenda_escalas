@@ -34,6 +34,9 @@ class Handler(BaseHTTPRequestHandler):
             path=urlparse(self.path).path; q=parse_qs(urlparse(self.path).query); svc=self.server.service
             if not path.startswith('/api/'):
                 require(method=='GET','Método não permitido.',405)
+                if path.startswith('/assets/'):
+                    f=(ROOT/'web'/path.lstrip('/')).resolve(); require(f.is_relative_to((ROOT/'web/assets').resolve()) and f.is_file(),'Arquivo não encontrado.',404)
+                    body=f.read_bytes();self.send_response(200);self.headers_secure();self.send_header('Content-Type',{'.woff2':'font/woff2','.ttf':'font/ttf','.css':'text/css; charset=utf-8','.jpg':'image/jpeg','.png':'image/png','.txt':'text/plain; charset=utf-8'}.get(f.suffix,'application/octet-stream'));self.send_header('Content-Length',str(len(body)));self.end_headers();self.wfile.write(body);return
                 filename={'/':'index.html','/app.js':'app.js','/style.css':'style.css'}.get(path)
                 require(filename,'Página não encontrada.',404); f=ROOT/'web'/filename; body=f.read_bytes(); self.send_response(200); self.headers_secure()
                 self.send_header('Content-Type',{'html':'text/html; charset=utf-8','js':'text/javascript; charset=utf-8','css':'text/css; charset=utf-8'}[filename.split('.')[-1]])

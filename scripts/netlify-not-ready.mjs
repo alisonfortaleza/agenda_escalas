@@ -1,2 +1,2 @@
-console.error('Publicação bloqueada: backend Python local ainda precisa de adaptação ao runtime Netlify. Use somente teste protegido após validação.');
+console.error('Produção bloqueada nesta etapa. Use a prévia de teste; publicação de produção exige liberação explícita.');
 process.exitCode = 1;

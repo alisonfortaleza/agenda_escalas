@@ -6,7 +6,14 @@
   "scripts": {
     "dev": "python3 -m app.server",
     "build": "tsc web/app.ts --target es2022 --lib es2022,dom --module es2022 --strict --outDir web",
-    "test": "python3 -m unittest discover -s tests -v"
+    "test": "python3 -m unittest discover -s tests -v",
+    "build:netlify": "node scripts/build-netlify.mjs",
+    "test:hosted": "node --test tests-js/*.test.mjs"
   },
-  "devDependencies": {"typescript": "7.0.2"}
+  "devDependencies": {
+    "typescript": "7.0.2"
+  },
+  "dependencies": {
+    "postgres": "4.1.0"
+  }
 }

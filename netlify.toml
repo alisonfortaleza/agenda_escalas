@@ -1,13 +1,11 @@
-# Configuração inicial. Ainda não autoriza publicação da aplicação.
 [build]
-  command = "node scripts/netlify-not-ready.mjs"
-  publish = "web"
-  # Exit 0 cancela builds automáticos de Git enquanto o backend é adaptado.
-  ignore = "exit 0"
-
-[context.production]
-  command = "node scripts/netlify-not-ready.mjs"
-
+  environment = { NODE_VERSION = "24" }
+  command = "npm run build:netlify"
+  publish = "dist"
+  ignore = "node scripts/ignore-netlify.mjs"
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
 [[headers]]
   for = "/*"
   [headers.values]
@@ -15,3 +13,4 @@
     X-Content-Type-Options = "nosniff"
     Referrer-Policy = "no-referrer"
     Cache-Control = "no-store"
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; base-uri 'self'; frame-ancestors 'none'; form-action 'self'"

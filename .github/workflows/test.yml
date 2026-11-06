@@ -41,5 +41,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.12'
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci --ignore-scripts
       - run: pip install -r requirements-postgres.txt
       - run: python tests/run_postgres_contract.py
+      - run: python tests-js/run_contracts.py
+      - run: node --test tests-js/*.test.mjs

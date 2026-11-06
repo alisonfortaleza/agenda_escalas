@@ -1,0 +1,65 @@
+test_50_minute_boundary (test_rules.BookingTests.test_50_minute_boundary) ... ok
+test_all_durations_and_closing (test_rules.BookingTests.test_all_durations_and_closing) ... ok
+test_concurrent_single_winner (test_rules.BookingTests.test_concurrent_single_winner) ... ok
+test_contiguous_halfopen (test_rules.BookingTests.test_contiguous_halfopen) ... ok
+test_destination_month_claimed (test_rules.BookingTests.test_destination_month_claimed) ... ok
+test_exclusive_window_and_day_permission (test_rules.BookingTests.test_exclusive_window_and_day_permission) ... ok
+test_external_weekday_closed_even_holiday (test_rules.BookingTests.test_external_weekday_closed_even_holiday) ... ok
+test_free_has_no_payment (test_rules.BookingTests.test_free_has_no_payment) ... ok
+test_friday_only_and_destination_week (test_rules.BookingTests.test_friday_only_and_destination_week) ... ok
+test_holiday_friday_booking_but_no_holiday_service (test_rules.BookingTests.test_holiday_friday_booking_but_no_holiday_service) ... ok
+test_internal_work_and_self (test_rules.BookingTests.test_internal_work_and_self) ... ok
+test_monthly_identity_survives_cancel (test_rules.BookingTests.test_monthly_identity_survives_cancel) ... ok
+test_multiunit_durations (test_rules.BookingTests.test_multiunit_durations) ... ok
+test_nonconsecutive_blocks (test_rules.BookingTests.test_nonconsecutive_blocks) ... ok
+test_offer_capacity (test_rules.BookingTests.test_offer_capacity) ... ok
+test_other_room_same_professional (test_rules.BookingTests.test_other_room_same_professional) ... ok
+test_window_edges (test_rules.BookingTests.test_window_edges) ... ok
+test_availability_returns_rule_reasons (test_rules.CompletionTests.test_availability_returns_rule_reasons) ... ok
+test_demo_bookings_are_valid_and_seed_once (test_rules.CompletionTests.test_demo_bookings_are_valid_and_seed_once) ... ok
+test_job_configured_idempotent_penalty (test_rules.CompletionTests.test_job_configured_idempotent_penalty) ... ok
+test_restore_clears_sessions_and_preserves_password (test_rules.CompletionTests.test_restore_clears_sessions_and_preserves_password) ... skipped 'Local-only/bootstrap or SQLite backup contract; hosted public-mode contracts tested separately.'
+test_room_and_account_server_permissions (test_rules.CompletionTests.test_room_and_account_server_permissions) ... ok
+test_valid_cycle_generation_and_publication (test_rules.CompletionTests.test_valid_cycle_generation_and_publication) ... ok
+test_bootstrap_protection (test_rules.IdentityTests.test_bootstrap_protection) ... skipped 'Local-only/bootstrap or SQLite backup contract; hosted public-mode contracts tested separately.'
+test_direct_api_permissions (test_rules.IdentityTests.test_direct_api_permissions) ... ok
+test_intern_requires_tutor (test_rules.IdentityTests.test_intern_requires_tutor) ... ok
+test_name_and_cpf (test_rules.IdentityTests.test_name_and_cpf) ... ok
+test_password_closes_bootstrap_and_sessions_persistently (test_rules.IdentityTests.test_password_closes_bootstrap_and_sessions_persistently) ... skipped 'Local-only/bootstrap or SQLite backup contract; hosted public-mode contracts tested separately.'
+test_registry_registration (test_rules.IdentityTests.test_registry_registration) ... ok
+test_unit_and_org_isolation (test_rules.IdentityTests.test_unit_and_org_isolation) ... ok
+test_backup_restore_consistent (test_rules.IncidentConfigTests.test_backup_restore_consistent) ... skipped 'Local-only/bootstrap or SQLite backup contract; hosted public-mode contracts tested separately.'
+test_block_requires_reason_and_decision (test_rules.IncidentConfigTests.test_block_requires_reason_and_decision) ... ok
+test_config_preserves_terms_and_detects_impact (test_rules.IncidentConfigTests.test_config_preserves_terms_and_detects_impact) ... ok
+test_destination_conflict_rolls_back_origin_and_block (test_rules.IncidentConfigTests.test_destination_conflict_rolls_back_origin_and_block) ... ok
+test_move_outside_friday_keeps_identity_and_history (test_rules.IncidentConfigTests.test_move_outside_friday_keeps_identity_and_history) ... ok
+test_personal_block_not_global (test_rules.IncidentConfigTests.test_personal_block_not_global) ... ok
+test_acceptance_required (test_rules.PaymentOccurrenceTests.test_acceptance_required) ... ok
+test_amount_difference (test_rules.PaymentOccurrenceTests.test_amount_difference) ... ok
+test_duplicate_payment_and_reference (test_rules.PaymentOccurrenceTests.test_duplicate_payment_and_reference) ... ok
+test_expired_can_revalidate (test_rules.PaymentOccurrenceTests.test_expired_can_revalidate) ... ok
+test_expired_payment_cannot_displace (test_rules.PaymentOccurrenceTests.test_expired_payment_cannot_displace) ... ok
+test_inactive_reason_rejected (test_rules.PaymentOccurrenceTests.test_inactive_reason_rejected) ... ok
+test_only_reception_justifies_and_reason_active (test_rules.PaymentOccurrenceTests.test_only_reception_justifies_and_reason_active) ... ok
+test_penalty_exact_48h_and_idempotent (test_rules.PaymentOccurrenceTests.test_penalty_exact_48h_and_idempotent) ... ok
+test_presence_5_minutes_boundary_and_delayed_job (test_rules.PaymentOccurrenceTests.test_presence_5_minutes_boundary_and_delayed_job) ... ok
+test_refund_uses_snapshot_and_stays_pending (test_rules.PaymentOccurrenceTests.test_refund_uses_snapshot_and_stays_pending) ... ok
+test_unassigned_teacher_cannot_modify (test_rules.PaymentOccurrenceTests.test_unassigned_teacher_cannot_modify) ... ok
+test_usage_policy_pending_does_not_invent_penalty (test_rules.PaymentOccurrenceTests.test_usage_policy_pending_does_not_invent_penalty) ... ok
+test_whatsapp_not_presence (test_rules.PaymentOccurrenceTests.test_whatsapp_not_presence) ... ok
+test_changed_terms_require_new_acceptance (test_rules.RegressionTests.test_changed_terms_require_new_acceptance) ... ok
+test_finance_and_personal_data_not_sent_to_teacher (test_rules.RegressionTests.test_finance_and_personal_data_not_sent_to_teacher) ... ok
+test_second_cycle_has_original_anchor (test_rules.RegressionTests.test_second_cycle_has_original_anchor) ... ok
+test_continuous_cycle (test_rules.ScheduleTests.test_continuous_cycle) ... ok
+test_holiday_requires_previous_off (test_rules.ScheduleTests.test_holiday_requires_previous_off) ... ok
+test_holiday_sunday_single_template (test_rules.ScheduleTests.test_holiday_sunday_single_template) ... ok
+test_intern_booking_disabled_until_policy_confirmed (test_rules.ScheduleTests.test_intern_booking_disabled_until_policy_confirmed) ... ok
+test_invalid_draft_cannot_publish (test_rules.ScheduleTests.test_invalid_draft_cannot_publish) ... ok
+test_rest_and_friday_adjustment (test_rules.ScheduleTests.test_rest_and_friday_adjustment) ... ok
+test_schedule_version_conflict (test_rules.ScheduleTests.test_schedule_version_conflict) ... ok
+test_weekend_and_seven_days (test_rules.ScheduleTests.test_weekend_and_seven_days) ... ok
+
+----------------------------------------------------------------------
+Ran 60 tests in 105.908s
+
+OK (skipped=4)

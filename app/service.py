@@ -41,6 +41,7 @@ class Service:
         with self.db.connect() as c:
             s=obj(c.execute('SELECT * FROM sessions WHERE token=?',(token,)).fetchone()); require(s and instant(s['expires'])>self.now(),'Sessão encerrada. Entre novamente.',401)
             u=obj(c.execute('SELECT * FROM users WHERE id=?',(s['user'],)).fetchone()); require(u and s['generation']==u['generation'],'Sessão encerrada.',401)
+            if hasattr(c,'set_context'): c.set_context(u['org'],u['unit'],u['role'],u['id'])
             if u['person']:
                 p=c.execute('SELECT active FROM people WHERE id=?',(u['person'],)).fetchone(); require(p and p['active'],'Vínculo inativo.',403)
             u.pop('password',None); return u,s
