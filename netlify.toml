@@ -1,0 +1,17 @@
+# Configuração inicial. Ainda não autoriza publicação da aplicação.
+[build]
+  command = "node scripts/netlify-not-ready.mjs"
+  publish = "web"
+  # Exit 0 cancela builds automáticos de Git enquanto o backend é adaptado.
+  ignore = "exit 0"
+
+[context.production]
+  command = "node scripts/netlify-not-ready.mjs"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "no-referrer"
+    Cache-Control = "no-store"
